@@ -1,0 +1,29 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Total odd from 1 to n</title>
+</head>
+<body>
+    <script>
+        var n = prompt('Enter a number')
+        var total = 0
+        var text = ""
+        for(i = 1; i < n-1; i++){
+            if(i % 2 != 0){
+                total += i
+                text += i + " + "
+            }
+        }
+        for(i = n-1; i <= n; i++){
+            if(i % 2 != 0){
+                total += i
+                text += i
+            }
+        }
+        document.write(text + " = " + total)
+    </script>
+</body>
+</html>

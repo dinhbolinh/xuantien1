@@ -1,0 +1,44 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Print prime from 1 to n</title>
+</head>
+
+<body>
+    <script>
+        var n = prompt("Enter a number")
+        printPrime(n)
+        function checkPrime(x){
+            var flag = true
+            if(x < 2){
+                flag = false
+            }else if(x == 2){
+                flag = true
+            }else{
+                for(i = 2; i < x; i++){
+                    if(x % i == 0){
+                        flag = false
+                        break
+                    }
+                }
+            }
+            return flag
+        }
+
+        function printPrime(n){
+            var text = ''
+            for(j = 1; j <= n; j++){
+                if(checkPrime(j)){
+                    text += j + " "
+                }
+            }
+            document.write(text)
+        }
+    </script>
+</body>
+
+</html>

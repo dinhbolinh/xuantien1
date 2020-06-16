@@ -1,0 +1,44 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Check for number made up of odd numbers</title>
+</head>
+
+<body>
+    <script>
+        var number = prompt('Enter a number')
+        var n = number;
+        var flag = true
+        // while (n > 1) {
+        //     var x = n % 10
+        //     n /= 10
+        //     if (parseInt(x) > 1) {
+        //         if (parseInt(x) % 2 == 0) {
+        //             flag = false
+        //             break
+        //         }
+        //     }
+        // }
+
+        while (n > 0) {
+            var x = n % 10
+            n = Math.floor(n / 10)
+            if (x % 2 == 0) {
+                flag = false
+                break
+            }
+        }
+
+        if (flag) {
+            document.write(number + ' được tạo ra từ toàn các số lẻ')
+        } else {
+            document.write(number + ' không được tạo ra từ toàn số lẻ')
+        }
+    </script>
+</body>
+
+</html>

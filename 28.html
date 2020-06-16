@@ -1,0 +1,49 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var students = [
+            {
+                id: "T3HXX1",
+                firstName: "NgAN",
+                lastName: "Duong Thuy"
+            },
+            {
+                id: "T3HXX2",
+                firstName: "Ha",
+                lastName: "Do Thi Thu"
+            },
+            {
+                id: "T3HXX5",
+                firstName: "Minh",
+                lastName: "Nguyen Nhat"
+            },
+            {
+                id: "T3HXX2",
+                firstName: "Thuy",
+                lastName: "Do Lan"
+            }
+        ]
+        var individualStudents = []
+
+        function checkLastName(name) {
+            var lastName = name.lastName
+            if (lastName.slice(0, 2) === 'Do') {
+                return name
+            }
+        }
+
+        individualStudents = students.filter(checkLastName)
+        console.log(individualStudents)
+    </script>
+</body>
+
+</html>

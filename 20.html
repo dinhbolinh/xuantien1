@@ -1,0 +1,47 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var str = `computer =            " ngAN 98    " AND class = "  REACTJS2002 "`
+        function styleStr1(str) {
+            str = str.trim()
+            while (str.includes('  ')) {
+                str = str.replace('  ', ' ')
+            }
+            return str
+        }
+
+        function styleStr2(str) {
+            str = str.trim()
+            while (str.includes(' ')) {
+                str = str.replace(' ', '')
+            }
+            return str
+        }
+
+        str = styleStr1(str)
+        var s1 = 'computer = '
+        var s2 = ' AND class = '
+
+        str.indexOf(s1)
+
+        var str1 = str.slice(s1.length, str.indexOf(s2)).toLowerCase()
+        str1 = styleStr2(str1)
+
+        var str2 = str.slice(str.indexOf(s2) + s2.length)
+        str2 = styleStr2(str2)
+
+        str = s1 + str1 + s2 + str2
+        alert(str)
+    </script>
+</body>
+
+</html>

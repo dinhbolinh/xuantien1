@@ -1,0 +1,48 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Min and max</title>
+</head>
+
+<body>
+    <script>
+        function findMax(a, b, c) {
+            var max
+            max = a
+            if (a < b) {
+                if (b < c) {
+                    max = c
+                } else {
+                    max = b
+                }
+            }else if(a < c){
+                max = c
+            }
+            return max
+        }
+
+        function findMin(a, b, c) {
+            var min
+            min = a
+            if (a > b) {
+                if (b > c) {
+                    min = c
+                } else {
+                    min = b
+                }
+            }else if(a > c){
+                min = c
+            }
+            return min
+        }
+
+        alert('Max: ' + findMax(23, 2, 70))
+        alert('Min: ' + findMin(10,21,8))
+    </script>
+</body>
+
+</html>

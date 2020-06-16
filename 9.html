@@ -1,0 +1,35 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Check the number of symmetries</title>
+</head>
+
+<body>
+    <script>
+        var n = prompt("Enter a number")
+        // n.toString()
+
+        if(isPalindrome(n)){
+            document.write(n + ': ' + 'is the number of symmetries')
+        }else{
+            document.write(n + ": " + "is not the number of symmetries")
+        }
+
+        function isPalindrome(str) {
+            for (let i = 0; i < str.length / 2; i++) {     //123321  
+                if (str[i] != str[str.length - i - 1]) {
+                    return false;
+                }
+            }
+            return true;
+        }
+
+        //đảo ngược x*10 + i
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,45 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- <script>
+        var s1 = 'This is a beautyful day'
+        var s2 = 'is'
+        var text = []
+        var count = 0
+        s1 = s1.split(' ')
+        // alert(s1.includes(s2))
+        // alert(s1)
+        // alert(s1.indexOf('is'))
+        for (i = s1.length - 1; i >= 0; i--) {
+            text.push(s1[i])
+        }
+        alert(text)
+        for (j = 0; j < text.length; j++) {
+            if (text[j].includes(s2) == true) {
+
+                count += 1
+            }
+        }
+        alert(count)
+    </script> -->
+    
+    <script>
+        function findLastAdjacentNumber(s1, s2) {
+            var str1 = s1.lastIndexOf(s2)
+            s1 = s1.slice(0, str1)
+            return s1.lastIndexOf(s2)
+        }
+
+        alert('Vị trí kế cuối: ' + findLastAdjacentNumber('this is a beatufyl day, is it', 'is'))
+    </script>
+</body>
+
+</html>
